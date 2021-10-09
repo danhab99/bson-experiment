@@ -6,15 +6,6 @@ def debug(*msg):
   if os.environ.get("DEBUG") == "1":
     print("DEBUG | ", *msg)
 
-def bytes_to_number(bs):
-  x = 0
-  l = len(bs)
-  debug("Read length", l)
-  for i in range(l, 0, -1):
-    ii = i - 1
-    x += bs[ii] << ii
-  return x
-
 SUBTYPE_LOOKUP = [
     "generic",
     "function",
